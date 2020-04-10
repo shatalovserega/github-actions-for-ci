@@ -3,8 +3,7 @@ name: Node CI
 on: [push]
 
 jobs:
-      
-    needs: build
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,6 +18,7 @@ jobs:
 
 
   test:
+    needs: build
     runs-on: ubuntu-latest
 
     strategy:
